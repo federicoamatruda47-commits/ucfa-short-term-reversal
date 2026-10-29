@@ -71,12 +71,19 @@ def esc(testo):
     return str(testo).replace("&", "&amp;")
 
 
+def _formatta(valore, d):
+    testo = f"{valore:.{d}f}"
+    if float(testo) == 0:                     # niente "-0,00"
+        testo = testo.lstrip("-")
+    return testo.replace(".", ",").replace("-", "\u2212")
+
+
 def pct(x, d=1):
-    return f"{x * 100:.{d}f}%".replace(".", ",").replace("-", "\u2212")
+    return _formatta(x * 100, d) + "%"
 
 
 def num(x, d=2):
-    return f"{x:.{d}f}".replace(".", ",").replace("-", "\u2212")
+    return _formatta(x, d)
 
 
 def P(testo, stile="p"):
