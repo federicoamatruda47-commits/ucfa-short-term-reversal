@@ -50,6 +50,11 @@ Le 4 varianti aggiungono un miglioramento alla volta: 1 generica, 2 + settore, 3
 
 I CSV usano `;` come separatore e `,` come decimale (si cambia con `CSV_SEP` e `CSV_DECIMALE`).
 
+## Report
+
+`report/Report_UCFA_short_term_reversal.pdf` spiega logica, scelte, percorso dei parametri, risultati e limiti.
+Si rigenera con `python report/genera_report.py` (legge i CSV in `output/`; usa il font Arial di Windows).
+
 ## Verifica
 
 Prima di produrre le metriche, il codice ricostruisce il P&L giornaliero dal solo log dei trade e lo confronta
