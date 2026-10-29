@@ -263,7 +263,6 @@ spy_in, spy_out, spy_tot = riga("benchmark", "SPY", "in_sample"), riga("benchmar
 st += [P("Short-term reversal long/short su S&P 500", "titolo"),
        P("Bande VWAP relative al settore, conferma RSI e filtri dalla letteratura accademica", "sotto"),
        P("Progetto di esercitazione \u2013 UCFA Finance Society, Universit\u00e0 Cattolica del Sacro Cuore, Milano", "sotto"),
-       P("Autore: Federico Amatruda", "sotto"),
        P(f'Codice, dati e grafici: <a href="{REPO_URL}" color="#0b3d6b">{REPO_URL}</a>', "sotto"),
        Spacer(1, 8)]
 
@@ -540,6 +539,6 @@ st.append(tabella([
 
 doc = SimpleDocTemplate(str(PDF), pagesize=A4, leftMargin=2 * cm, rightMargin=2 * cm, topMargin=1.8 * cm,
                         bottomMargin=2 * cm, title="Short-term reversal long/short su S&P 500",
-                        author="Federico Amatruda", subject="UCFA Finance Society")
+                        author="", subject="UCFA Finance Society")
 doc.build(st, onFirstPage=piede, onLaterPages=piede)
 print("PDF creato:", PDF)
